@@ -1,9 +1,9 @@
 # SPDX-FileCopyrightText: © 2020 Chris Hafey, Team CharLS
 # SPDX-License-Identifier: BSD-3-Clause
 
-cmake_minimum_required(VERSION 3.22...4.2)
+cmake_minimum_required(VERSION 3.22...4.3)
 
-project (charlsjs VERSION 0.9.0 LANGUAGES CXX)
+project (charlsjs VERSION 0.10.0 LANGUAGES CXX)
 
 # The CMake project version is leading: use it to generate package.json
 set(DIST_DIR "${CMAKE_SOURCE_DIR}/dist")
