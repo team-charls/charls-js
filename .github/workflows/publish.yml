@@ -10,7 +10,7 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    environment: npm          # GitHub Actions environment name for protections/secrets, not npmjs.com config
+    environment: npm # GitHub Actions environment name for protections/secrets, not npmjs.com config
 
     permissions:
       id-token: write
@@ -26,14 +26,14 @@ jobs:
       - name: Setup Emscripten
         uses: mymindstorm/setup-emsdk@v16
         with:
-          version: 6.0.0
-          actions-cache-folder: 'emsdk-cache'
+          version: 6.0.9
+          actions-cache-folder: "emsdk-cache"
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: '24'
-          registry-url: 'https://registry.npmjs.org'
+          node-version: "24"
+          registry-url: "https://registry.npmjs.org"
 
       - name: Verify Emscripten
         run: emcc --version

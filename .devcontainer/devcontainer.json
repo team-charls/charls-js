@@ -1,48 +1,42 @@
 // For format details, see https://containers.dev/implementors/json_reference/
 {
-	"name": "CharLS WebAssembly Development",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
-	"capAdd": [
-		"SYS_PTRACE"
-	],
-	"securityOpt": [
-		"seccomp=unconfined"
-	],
-
-	// Configure tool-specific properties
-	"customizations": {
-		"vscode": {
-			// Set *default* container specific settings.json values on container create
-			"settings": {
-				"terminal.integrated.defaultProfile.linux": "bash",
-				"cmake.configureOnOpen": false,
-				"C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
-			},
-
-			// Add the IDs of extensions you want installed when the container is created
-			"extensions": [
-				"ms-vscode.cpptools",
-				"ms-vscode.cpptools-extension-pack",
-				"ms-vscode.cmake-tools",
-				"twxs.cmake",
-				"dbaeumer.vscode-eslint",
-				"esbenp.prettier-vscode",
-				"ms-vscode.live-server"
-			]
-		}
-	},
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally
-	// "forwardPorts": [8080],
-
-	// Use 'postCreateCommand' to run commands after the container is created
-	"postCreateCommand": "npm install",
-
-	// Use 'postStartCommand' to run commands after the container starts
-	// "postStartCommand": "",
-
-	// Connect as the emscripten user
-	"remoteUser": "emscripten"
+    "name": "CharLS WebAssembly Development",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "capAdd": [
+        "SYS_PTRACE"
+    ],
+    "securityOpt": [
+        "seccomp=unconfined"
+    ],
+    // Configure tool-specific properties
+    "customizations": {
+        "vscode": {
+            // Set *default* container specific settings.json values on container create
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "cmake.configureOnOpen": false,
+                "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+            },
+            // Add the IDs of extensions you want installed when the container is created
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-extension-pack",
+                "ms-vscode.cmake-tools",
+                "twxs.cmake",
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "ms-vscode.live-server"
+            ]
+        }
+    },
+    // Use 'forwardPorts' to make a list of ports inside the container available locally
+    // "forwardPorts": [8080],
+    // Use 'postCreateCommand' to run commands after the container is created
+    "postCreateCommand": "npm install",
+    // Use 'postStartCommand' to run commands after the container starts
+    // "postStartCommand": "",
+    // Connect as the ubuntu user
+    "remoteUser": "ubuntu"
 }

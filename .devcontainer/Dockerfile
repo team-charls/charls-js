@@ -3,7 +3,7 @@
 # Note: This Dockerfile is based on Microsoft VS Code dev container templates.
 #       See https://github.com/microsoft/devcontainers for the originals.
 
-FROM docker.io/emscripten/emsdk:6.0.0
+FROM docker.io/emscripten/emsdk:6.0.9
 
 # Avoid warnings by switching to noninteractive
 ENV DEBIAN_FRONTEND=noninteractive
@@ -41,5 +41,5 @@ RUN apt-get update \
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=dialog
 
-# Set the default user to emscripten (already exists in base image)
-USER emscripten
+# Set the default user to ubuntu (already exists in base image)
+USER ubuntu
